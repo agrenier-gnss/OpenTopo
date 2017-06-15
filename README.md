@@ -2,7 +2,9 @@
 
 The Open Topo project is an open source project, which goal is to developpe lowcost topographic survey equipment, with the conception plans and softwares accessibles by anybody freely.  The purpose is to democratize topography and facilitate its accession by developing countries, ravage by war or natural disaster. 
 
-## Hardware
+## Open GNSS
+
+### Hardware
 
 As today, the project aim to developpe a lowcost GNSS acquisition system. Hardware will be composed of:
 
@@ -20,8 +22,8 @@ As for now the actual hardware for developpement is:
 
 - Two geodesic antenna (reference ?)
 
-## Software
+### Software
 
 Code for the hardware is currently developped in Arduino, and run into the ESP8266EX Board. 
-Code for phone or computer will be developped in Web.
+Code for phone or computer will surely be developped in Web.
 
