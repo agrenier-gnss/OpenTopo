@@ -1,0 +1,21 @@
+==================
+== NOTE C94-M8P ==
+==========================
+Author: Antoine GRENIER
+First update: 2017/06/17
+Last update: 2017/06/17
+==========================
+
+NMEA PROTOCOL
+-------------
+See https://www.sparkfun.com/datasheets/GPS/Modules/u-blox5_Protocol_Specifications(GPS.G5-X-07036).pdf
+
+- GNRMC: Recommended Minimum data, general information on positon.    -> USEFUL
+- GNVTG: Information on the recever speed.                            -> USELESS
+- GPGBS: GNSS Satellite Fault Detection, information on error         -> USEFUL TO ADD
+- GPGGA: Gobal positionning fix data,                                 -> USEFUL
+- GPGSA: GPS Dop and Active Satellites information                    -> USEFUL
+- GPGSV: GPS Satellite in view information                            -> USEFUL
+- GLGSV: GLONASS Satellite in view information                        -> USEFUL
+- GNGLL: Latitude and longitude, with time of position fix and status -> USEFUL
+

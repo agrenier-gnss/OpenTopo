@@ -1,0 +1,45 @@
+==========================
+== LOG & NOTE OPEN TOPO ==
+==========================
+Author: Antoine GRENIER
+First update: 2017/06/12
+Last update: 2017/06/17
+==========================
+-----------------
+Update 2017/06/12
+-----------------
+
+- Update the base and the rover on firmware version 1.30
+- Setup the configuration of the base and the rover
+- Achieve a cm precision during test in a field, clear weather and clear vision
+
+-----------------
+Update 2017/06/13
+-----------------
+
+- Achieve to gather output GNSS Data from the J8 connector on pin 8(RX) and 9(TX)
+  to USB link, and with the 'Hercules' software.
+  
+- Achieve to read NMEA protocol with the ESP8266 board and the 'TinyGPS++' library
+
+-----------------
+Update 2017/06/17
+-----------------
+
+- Achieve to gather and send data with the ESP8266EX Demo Board on pin 14 (RX)
+  and pin 12 (TX).
+  
+- Achieve to read data from one C94-M8P Board with the ESP8266EX Board and parse 
+  it with 'TinyGPS++' library with Arduino exemple code "FullExample.ino".
+
+  
+Notes
+-----
+- RX transmitter pin connecte on TX recever pin and and reverse.
+
+
+  
+
+
+ 
+
