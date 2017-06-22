@@ -32,6 +32,11 @@ Update 2017/06/17
 - Achieve to read data from one C94-M8P Board with the ESP8266EX Board and parse 
   it with 'TinyGPS++' library with Arduino exemple code "FullExample.ino".
 
+-----------------
+Update 2017/06/22
+-----------------
+
+- Add GNSS2Web Code to Github -> TO BE TESTED
   
 Notes
 -----
