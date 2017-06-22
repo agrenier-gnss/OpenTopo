@@ -25,5 +25,5 @@ As for now the actual hardware for developpement is:
 ### Software
 
 Code for the hardware is currently developped in Arduino, and run into the ESP8266EX Board. 
-Code for phone or computer will surely be developped in Web.
+Code for phone or computer will be developped in JavaScript.
 
