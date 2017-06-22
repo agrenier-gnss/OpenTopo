@@ -57,10 +57,10 @@ void handleRoot() {
   sprintf(sz, "%d", cpt);
   Serial.println(sz);
   strTemp = sz;
-  str = "<h1>";
+  str = "<p>";
   str += strTemp;
-  str += "</h1>";
-	server.send(200, "text/html", str);
+  str += "</p>";
+  server.send(200, "text/html", str);
 }
 
 void setup() {
