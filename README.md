@@ -31,10 +31,9 @@ Code for phone or computer will be developped in JavaScript.
 
 Phone application developped using Cordova 6.1.1 for Android
 
-##Authors & Contributors
+## Authors & Contributors
 
 Antoine Grenier
-Olivier Grenier
 Jean Massip
 
 
