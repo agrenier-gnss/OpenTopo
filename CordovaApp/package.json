@@ -11,6 +11,8 @@
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-android": "^6.2.3",
+        "cordova-plugin-app-event": "git+https://github.com/katzer/cordova-plugin-app-event.git",
+        "cordova-plugin-badge": "git+https://github.com/katzer/cordova-plugin-badge.git",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-dialog": "0.0.1",

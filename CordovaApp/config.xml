@@ -2,10 +2,10 @@
 <widget id="com.coolappz.OpenTopo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>OpenTopo</name>
     <description>
-        Phone application developped using Cordova 6.1.1 for Android
+        A sample Apache Cordova application that responds to the deviceready event.
     </description>
-    <author email="" href="">
-        Jean Massip
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
     </author>
     <content src="index.html" />
     <access origin="*" />

@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      "https://github.com/katzer/cordova-plugin-badge.git",
+      "/home/jean/NetBeansProjects/OpenTopo"
+    ]
+  ],
+  "_from": "git+https://github.com/katzer/cordova-plugin-badge.git",
+  "_id": "cordova-plugin-badge@0.8.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-badge",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/katzer/cordova-plugin-badge/master/package.json",
+      "gitUrl": "git://github.com/katzer/cordova-plugin-badge.git",
+      "httpsUrl": "git+https://github.com/katzer/cordova-plugin-badge.git",
+      "shortcut": "github:katzer/cordova-plugin-badge",
+      "ssh": "git@github.com:katzer/cordova-plugin-badge.git",
+      "sshUrl": "git+ssh://git@github.com/katzer/cordova-plugin-badge.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "https://github.com/katzer/cordova-plugin-badge.git",
+    "rawSpec": "https://github.com/katzer/cordova-plugin-badge.git",
+    "scope": null,
+    "spec": "git+https://github.com/katzer/cordova-plugin-badge.git",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/katzer/cordova-plugin-badge.git#e426af29ce562aaf028b330e348a2b61c03fe067",
+  "_shasum": "cfa338f93e1df47feba45160156d8a84b3d6b11e",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/katzer/cordova-plugin-badge.git",
+  "_where": "/home/jean/NetBeansProjects/OpenTopo",
+  "author": {
+    "name": "Sebastián Katzer"
+  },
+  "bugs": {
+    "url": "https://github.com/katzer/cordova-plugin-badge/issues"
+  },
+  "dependencies": {},
+  "description": "Shows the count of unread messages as a badge on the app icon",
+  "devDependencies": {},
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.2.0"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=10"
+    }
+  ],
+  "gitHead": "e426af29ce562aaf028b330e348a2b61c03fe067",
+  "homepage": "https://github.com/katzer/cordova-plugin-badge#readme",
+  "keywords": [
+    "appplant",
+    "badge",
+    "cordova",
+    "ecosystem:cordova",
+    "shortcutbadger"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-badge",
+  "optionalDependencies": {},
+  "platforms": [
+    "android",
+    "browser",
+    "ios",
+    "osx",
+    "windows"
+  ],
+  "readme": "\n<p align=\"left\"><b><a href=\"https://github.com/katzer/cordova-plugin-badge/tree/example\">SAMPLE APP</a> :point_right:</b></p>\n\n# Cordova Badge Plugin <br> [![npm version](https://badge.fury.io/js/cordova-plugin-badge.svg)](https://badge.fury.io/js/cordova-plugin-badge) [![Code Climate](https://codeclimate.com/github/katzer/cordova-plugin-badge/badges/gpa.svg)](https://codeclimate.com/github/katzer/cordova-plugin-badge) [![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L3HKQCD9UA35A \"Donate once-off to this project using Paypal\")\n\n[Cordova][cordova] plugin to access and modify the badge number of the app icon on various mobile platforms including iOS, Android and Windows.\n\n<img height=\"150px\" align=\"right\" hspace=\"19\" vspace=\"12\" src=\"http://4.bp.blogspot.com/-GBwBSN92DvU/UB8Kut7Oz0I/AAAAAAAAJKs/mJgBmj1RKqU/s1600/whatsapp+wp8+10.png\"></img>\n\n### How they appear to the user\n\nUsers see notifications in the following ways:\n- Badging the app’s icon\n\n\n### Supported Platforms\n\n- __Android / Amazon FireOS__ (via [ShortcutBadger][shortcut_badger])\n- __Browser__\n- __iOS__\n- __OSX__\n- __Windows__\n\n\n## Installation\n\nThe plugin can be installed via [Cordova-CLI][CLI] and is publicly available on [NPM][npm].\n\nExecute from the projects root folder:\n\n    $ cordova plugin add cordova-plugin-badge\n\nOr install a specific version:\n\n    $ cordova plugin add cordova-plugin-badge@VERSION\n\nOr install the latest head version:\n\n    $ cordova plugin add https://github.com/katzer/cordova-plugin-badge.git\n\nOr install from local source:\n\n    $ cordova plugin add cordova-plugin-badge --searchpath <path>\n\n\n## Usage\n\nThe plugin creates the object `cordova.plugins.notification.badge` and is accessible after *deviceready* has been fired.\n\n```js\ndocument.addEventListener('deviceready', function () {\n    // cordova.plugins.notification.badge is now available\n}, false);\n```\n\n### Set the badge number\n\nBadge numbers cannot be negative. The maximum might be restricted by the OS.\nA callback is optional and will be invoked with the current badge number.\n\n```js\ncordova.plugins.notification.badge.set(10);\n```\n\nThere's built-in support to increase the badge number:\n\n```js\ncordova.plugins.notification.badge.increase(1, function (badge) {\n    // badge is now 11 (10 + 1)\n});\n```\n\nTo decrease the badge number:\n\n```js\ncordova.plugins.notification.badge.decrease(20, function (badge) {\n    // badge is now 0\n});\n```\n\nAnd to clear out the badge number:\n\n```js\ncordova.plugins.notification.badge.clear();\n```\n\n### Get the badge number\n\nThe default value is 0. The badge number wont get lost after reboot or app restart.\n\n```js\ncordova.plugins.notification.badge.get(function (badge) {\n    ...\n});\n```\n\n__Note:__ Modifying the badge number outside of the plugin does result into wrong behaivor!\n\n### Configurations\n\nTo clear the badge number automatically if the user taps the app icon:\n\n```js\ncordova.plugins.notification.badge.configure({ autoClear: true });\n```\n\n\n## Permissions\n\nThe plugin might ask for granting permissions to modify the badge number.\nThat's done automatically but it's also possible to request them manually:\n\n```javascript\ncordova.plugins.notification.badge.requestPermission(function (granted) {\n    ...\n});\n```\n\nOr to check if they have been granted already:\n\n```javascript\ncordova.plugins.notification.badge.hasPermission(function (granted) {\n    ...\n});\n```\n\n\n## Quirks\n\nOn Android not all launchers support badges. In order to set badges the plugin uses [ShortcutBadger][shortcut_badger]. Check out their website to see which launchers are supported.\n\nIf you're using PhoneGap Build please make sure you specify gradle as your Android build tool in config.xml:\n\n```xml\n<preference name=\"android-build-tool\" value=\"gradle\" />\n```\n\nTo specify a custom version of _ShortcutBadger_ follow this [guide][gradle-guide]. The name of the property is `appShortcutBadgerVersion`.\n\n```gradle\n// In <your-project>/platforms/android/build-extras.gradle\next.appShortcutBadgerVersion = '1.1.17'\n```\n\n\n## Contributing\n\n1. Fork it\n2. Create your feature branch (`git checkout -b my-new-feature`)\n3. Commit your changes (`git commit -am 'Add some feature'`)\n4. Push to the branch (`git push origin my-new-feature`)\n5. Create new Pull Request\n\n\n## License\n\nThis software is released under the [Apache 2.0 License][apache2_license].\n\nMade with :yum: from Leipzig\n\n© 2013 [appPlant GmbH][appplant]\n\n\n[cordova]: https://cordova.apache.org\n[shortcut_badger]: https://github.com/leolin310148/ShortcutBadger\n[CLI]: http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface\n[npm]: https://www.npmjs.com/package/cordova-plugin-badge\n[gradle-guide]: https://cordova.apache.org/docs/en/latest/guide/platforms/android/#configuring-gradle\n[apache2_license]: http://opensource.org/licenses/Apache-2.0\n[appplant]: http://appplant.de\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katzer/cordova-plugin-badge.git"
+  },
+  "version": "0.8.1"
+}

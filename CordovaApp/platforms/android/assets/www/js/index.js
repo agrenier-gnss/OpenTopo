@@ -55,7 +55,7 @@ var app = {
     
     storeData: function(){
         var storedData = JSON.stringify(data, null, '\t');
-        data = [];
+        data.surveys = [];
         var fileName = app.getCurrentTime() + ".json";
         window.resolveLocalFileSystemURL(cordova.file.externalApplicationStorageDirectory,function(fileSystem){
            fileSystem.getDirectory("OpenTopo",{create: true},function(dir){

@@ -42,17 +42,17 @@
     "cordova-plugin-app-event": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-app-event"
+            "id": "https://github.com/katzer/cordova-plugin-app-event.git"
         },
-        "is_top_level": false,
+        "is_top_level": true,
         "variables": {}
     },
     "cordova-plugin-badge": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-badge@0.7.4"
+            "id": "https://github.com/katzer/cordova-plugin-badge.git"
         },
-        "is_top_level": false,
+        "is_top_level": true,
         "variables": {}
     },
     "de.appplant.cordova.plugin.local-notification": {
