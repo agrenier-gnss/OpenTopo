@@ -11,7 +11,7 @@
 const char *ssid = "ESPap";
 const char *password = "thereisnospoon";
 
-static const int RXPin = 14, TXPin = 12;
+//static const int RXPin = 14, TXPin = 12;
 static const uint32_t GPSBaud = 9600;
 
 TinyGPSPlus gps;
@@ -19,16 +19,34 @@ TinyGPSCustom vdop(gps, "PUBX", 16);
 TinyGPSCustom hAcc(gps, "PUBX", 9);
 TinyGPSCustom vAcc(gps, "PUBX", 10);
 
-SoftwareSerial swSer(RXPin, TXPin);     //TX -> IO12 RX->IO14 on board
+
+//SoftwareSerial swSer(RXPin, TXPin);     //TX -> IO12 RX->IO14 on board
 ESP8266WebServer server(80);
 
-String strData = "";
+String strData;
+
+char strDate[16];
+char strTime[16];
+char strLat[16];
+char strLng[16];
+//char strAlt[16];
+
+unsigned long start;
+char myState = 0;
 
 void handleRoot()
 {
 	strData = "";
 
+	sprintf(strDate, "%02d/%02d/%02d", gps.date.year(), gps.date.month(), gps.date.day());
+	sprintf(strDate, "%02d:%02d:%02d", gps.time.hour(),gps.time.minute(), gps.time.second());
+
+	sprintf
+
+
+	/*
 	strData += "{";
+
 	strData = String(strData + " \"date\": \"" + gps.date.year() + "/" + gps.date.month() + "/" + gps.date.day() + "\",");
 	strData = String(strData + " \"time\": \"" + gps.time.hour() + ":" + gps.time.minute() + ":" + gps.time.second() + "\",");
 	strData = String(strData + " \"hdop\": \"" + gps.hdop.value() + "\",");
@@ -38,9 +56,9 @@ void handleRoot()
 	strData = String(strData + " \"altitude\": \"" + gps.altitude.meters() + "\",");
 	strData = String(strData + " \"hacc\": \"" + hAcc.value() + "\",");
 	strData = String(strData + " \"vacc\": \"" + vAcc.value() + "\"");
-	strData += "}";
-
-	//strData += "{\"latitude\": \"51.508131\", \"longitude\": \"-0.128002\"}";
+	strData += "}";*/
+	
+	//strData = "{\"latitude\": \"51.508131\", \"longitude\": \"-0.128002\"}";
 
 	server.send(200, "application/json; charset=utf-8", strData);
 }
@@ -52,17 +70,7 @@ void setup()
 	pinMode(LED_RELAY, OUTPUT);
 
 	Serial.begin(GPSBaud);
-	swSer.begin(GPSBaud);
-
-	Serial.println();
-	Serial.print("Configuring access point...");
-
 	WiFi.softAP(ssid, password);
-
-	IPAddress myIP = WiFi.softAPIP();
-
-	Serial.print("AP IP address: ");
-	Serial.println(myIP);
 
 	server.on("/", handleRoot);
 	server.begin();
@@ -73,28 +81,41 @@ void setup()
 
 void loop()
 {
-	digitalWrite(LED_RELAY, LOW);
-	delay(10);
-
-	smartDelay(1000);
-	if (millis() > 5000 && gps.charsProcessed() < 10)
-	{
-		Serial.println(F("No GPS data received: check wiring"));
-	}
-
-	digitalWrite(LED_RELAY, HIGH);
+	smartDelay(800);
 
 	server.handleClient();
-
-	delay(10);
 }
 
 static void smartDelay(unsigned long ms)
 {
+	switch (myState)
+	{
+	case 1:
+		if (Serial.available())
+		{
+			gps.encode(Serial.read());
+		}
+		if (millis() - start >= ms)
+		{
+			myState = 2;
+		}
+		break;
+	case 2:
+		digitalWrite(LED_RELAY, HIGH);
+		myState = 0;
+		break;
+	default:
+		digitalWrite(LED_RELAY, LOW);
+		start = millis();
+		myState = 1;
+		break;
+	}
+
+	/*
 	unsigned long start = millis();
 	do
 	{
 		while (swSer.available())
 			gps.encode(swSer.read());
-	} while (millis() - start < ms);
+	} while (millis() - start < ms);*/
 }

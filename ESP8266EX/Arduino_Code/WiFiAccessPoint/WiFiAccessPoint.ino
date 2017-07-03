@@ -35,10 +35,13 @@
 #include <ESP8266WebServer.h>
 #include <stdio.h>
 
+#include <SoftwareSerial.h>
 
 /* Set these to your desired credentials. */
 const char *ssid = "ESPap";
 const char *password = "thereisnospoon";
+
+static const int RXPin = 14, TXPin = 12;
 
 int cpt=0;
 char sz[64] = {0};
@@ -46,6 +49,8 @@ String str = "";
 String strTemp ;
 
 ESP8266WebServer server(80);
+
+SoftwareSerial swSer(RXPin, TXPin, false, 512); 
 
 /* Just a little test message.  Go to http://192.168.4.1 in a web browser
  * connected to this access point to see it.
@@ -57,9 +62,9 @@ void handleRoot() {
   sprintf(sz, "%d", cpt);
   Serial.println(sz);
   strTemp = sz;
-  str = "<p>";
-  str += strTemp;
-  str += "</p>";
+  //str = "<p>";
+  str = "{\"latitude\": \"51.508131\", \"longitude\": \"-0.128002\"}";
+  //str += "</p>";
   server.send(200, "text/html", str);
 }
 
