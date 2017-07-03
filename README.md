@@ -27,7 +27,7 @@ As for now the actual hardware for developpement is:
 Code for the hardware is currently developped in Arduino, and run into the ESP8266EX Board. 
 Code for phone or computer will be developped in JavaScript.
 
-## Cordova App
+### Cordova App
 
 Phone application developped using Cordova 6.1.1 for Android
 
