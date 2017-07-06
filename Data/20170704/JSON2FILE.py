@@ -2,6 +2,7 @@ import json
 import utm
 import numpy as np
 import os
+import datetime
 
 # mArrUTMX = []
 # mArrUTMY = []
@@ -34,6 +35,8 @@ class GNSSPoint:
 
         self.utmX = -1
         self.utmY = -1
+        self.utmXLoc = -1
+        self.utmYLoc = -1
 
         for pts in data['surveys']:
             self.date.append(pts['date'])
@@ -72,6 +75,10 @@ class GNSSPoint:
         if self.meanLat != 90 and self.meanLng != 90:
             self.utmX, self.utmY, a, b = utm.from_latlon(float(self.meanLat), float(self.meanLng))
 
+    def projUTM_local(self, dx, dy):
+        self.utmXLoc = self.utmX - dx
+        self.utmYLoc = self.utmY - dy
+
 
 def handleFile(file):
     f = open(file, 'r')
@@ -85,7 +92,13 @@ def handleFile(file):
 # MAIN PROGRAM
 #-------------------------------------------------------------------------------------
 
+dx = 376000
+dy = 5479000
+
 dir = os.listdir()
+
+actDate = datetime.datetime.now()
+outFileName = "opengnss_" + actDate.strftime("%Y-%m-%d_%H-%M-%S") + ".txt"
 
 surveyedPoints = []
 
@@ -99,10 +112,12 @@ for pts in surveyedPoints:
     pts.Best_Mean()
     pts.projUTM()
 
-ff = open("test.txt", 'w')
+ff = open(outFileName, 'w')
 
 for pts in surveyedPoints:
-    s = str(pts.utmX) + "," + str(pts.utmY) + "," + str(pts.meanAlt) + "\n"
+    pts.projUTM_local(dx, dy)
+    i += 1
+    s = str(i) + ":X=" + str(pts.utmXLoc) + ",Y=" + str(pts.utmYLoc) + ",Z=" + str(pts.meanAlt) + ",PH=7,PV=7,MD=JT_PNT_AP_M\n"
     ff.write(s)
 
 ff.close()
