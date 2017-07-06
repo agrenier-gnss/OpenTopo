@@ -1,0 +1,136 @@
+{
+	"surveys": [
+		{
+			"date": "2017/6/28",
+			"time": "15:54:32",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "23.94",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:33",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "23.64",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:34",
+			"hdop": "89",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "23.90",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:53",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "22.21",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:54",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "22.38",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:55",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "22.21",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:57:43",
+			"hdop": "91",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "38.19",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:57:44",
+			"hdop": "93",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "38.46",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		}
+	]
+}

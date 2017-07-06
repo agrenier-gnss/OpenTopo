@@ -1,0 +1,64 @@
+{
+	"surveys": [
+		{
+			"date": "2017/07/04",
+			"time": "15:29:54",
+			"hdop": "0.73",
+			"vdop": "1.14",
+			"latitude": "49.458644268",
+			"longitude": "1.290754608",
+			"altitude": "148.90",
+			"GeoidSeparation": "45.656",
+			"hacc": "0.014",
+			"vacc": "0.010"
+		},
+		{
+			"date": "2017/07/04",
+			"time": "15:29:55",
+			"hdop": "0.73",
+			"vdop": "1.14",
+			"latitude": "49.458644337",
+			"longitude": "1.290754505",
+			"altitude": "148.89",
+			"GeoidSeparation": "45.656",
+			"hacc": "0.014",
+			"vacc": "0.010"
+		},
+		{
+			"date": "2017/07/04",
+			"time": "15:29:56",
+			"hdop": "0.73",
+			"vdop": "1.14",
+			"latitude": "49.458644393",
+			"longitude": "1.290754485",
+			"altitude": "148.91",
+			"GeoidSeparation": "45.656",
+			"hacc": "0.014",
+			"vacc": "0.010"
+		},
+		{
+			"date": "2017/07/04",
+			"time": "15:29:57",
+			"hdop": "0.73",
+			"vdop": "1.14",
+			"latitude": "49.458644458",
+			"longitude": "1.290754505",
+			"altitude": "148.91",
+			"GeoidSeparation": "45.656",
+			"hacc": "0.014",
+			"vacc": "0.010"
+		},
+		{
+			"date": "2017/07/04",
+			"time": "15:29:58",
+			"hdop": "0.73",
+			"vdop": "1.14",
+			"latitude": "49.458644450",
+			"longitude": "1.290754555",
+			"altitude": "148.91",
+			"GeoidSeparation": "45.656",
+			"hacc": "0.014",
+			"vacc": "0.010"
+		}
+	]
+}

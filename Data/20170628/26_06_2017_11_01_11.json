@@ -1,0 +1,81 @@
+{
+	"surveys": [
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2000/0/0",
+			"time": "0:0:0",
+			"hdop": "0",
+			"vdop": "",
+			"latitude": "0.00",
+			"longitude": "0.00",
+			"altitude": "0.00",
+			"hacc": "",
+			"vacc": ""
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"surveys": [
+		{
+			"date": "2017/6/26",
+			"time": "15:1:44",
+			"hdop": "67",
+			"vdop": "",
+			"latitude": "49.46",
+			"longitude": "1.29",
+			"altitude": "155.08",
+			"hacc": "",
+			"vacc": ""
+		}
+	]
+}

@@ -1,0 +1,37 @@
+{
+	"surveys": [
+		{
+			"date": "2017/6/28",
+			"time": "15:54:32",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "23.94",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:33",
+			"hdop": "115",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "23.64",
+			"hacc": "",
+			"vacc": ""
+		},
+		{
+			"date": "2017/6/28",
+			"time": "15:54:34",
+			"hdop": "89",
+			"vdop": "",
+			"latitude": "49.44",
+			"longitude": "1.09",
+			"altitude": "23.90",
+			"hacc": "",
+			"vacc": ""
+		}
+	]
+}
