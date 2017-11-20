@@ -1,0 +1,9 @@
+# Compile files
+OpenSoft/build
+
+# C/C++ trash files
+*.o
+*.so
+
+# Vim temp file
+.*.swp

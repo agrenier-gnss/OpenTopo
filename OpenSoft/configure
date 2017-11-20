@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# If make a distclean haven't been run before
+rm -rf build/
+
+# Set up trash directort
+mkdir build/
+cd build/
+
+# Build the project with debug rule if asked
+if [ "$1" == "-g" ]; then
+  cmake -D CMAKE_BUILD_TYPE:STRING="DEBUG" ..
+else
+  cmake ..
+fi
+
+cd ..
